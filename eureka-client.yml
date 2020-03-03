@@ -1,0 +1,23 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: server-client
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&allowMultiQueries=true&characterEncoding=utf8&useSSL=false&serverTimezone=CTT&allowPublicKeyRetrieval=true
+    #driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    #是否从服务器eureka server获取注册的信息
+    fetch-registry: true
+    #配置eureka server 的地址，用于注册服务和获取服务
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+
